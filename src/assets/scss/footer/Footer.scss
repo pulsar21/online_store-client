@@ -1,0 +1,144 @@
+@import '../utils/consts.scss';
+.footer {
+    margin-top: 4rem;
+    padding: 4rem 1rem; 
+    background-color: $white;
+    &__block {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 4rem;
+    }
+    &__left {
+        & > h3 {
+            font-size: 16px;
+        }
+        & > p {
+            margin-top: 2rem;
+        }
+        .search {
+            margin-top: 2rem;
+            align-self: flex-start;
+            width: 450px;
+            & > span {
+                & > input {
+                    border-radius: 15px;
+                }
+                & > span > button {
+                    width: 150px;
+                    border: 1.5px solid $voilet;
+                    background-color: $voilet;
+                    border-radius: 0 15px 15px 0 !important;
+                    &:hover {
+                        color: $white;
+                    }
+                    & > span > svg {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .social {
+            margin-top: 2rem;
+            & > ul {
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                & > li {
+                    margin-left: 1rem;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    & > a {
+                        font-size: 30px;
+                        & > span > svg {
+                            color: $silver;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__right {
+        & > .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            & > ul {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .hotline {
+                    margin-top: 2rem;
+                }
+                & > li {
+                    margin-right: 0;
+                    text-align: start;
+                    .active {
+                        font-size: 16px;
+                        color: $dark;
+                    }
+                    & > a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .footer {
+        &__block {
+            gap: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .footer {
+        &__block {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+        &__right {
+            .content {
+                justify-items: start;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 524px) {
+    .footer {
+        &__left {
+            .search {
+                width: 100%;
+                & > span {
+                    & > span > button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &__right {
+            .content {
+                justify-items: start;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .footer {
+        &__right {
+            .content {
+                justify-items: start;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2rem;
+            }
+        }
+    }
+}

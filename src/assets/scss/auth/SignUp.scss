@@ -1,0 +1,43 @@
+@import '../utils/consts.scss';
+.signup {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    &__form {
+        background-color: $white;
+        padding: 3rem;
+    }
+    &__thumb {
+        height: 80vh;
+        width: 100%;
+        background: $bgIndigo url('../../img/auth/auth.svg') no-repeat center center;
+        background-size: contain;
+    }
+    &__link {
+        align-self: flex-end;
+        color: $voilet;
+    }
+    &__input {
+        margin-top: 1rem;
+    }
+    .ant-form-item-has-feedback.ant-form-item-has-success .ant-form-item-children-icon, .ant-form-item-has-feedback.ant-form-item-has-error .ant-form-item-children-icon {
+        margin-top: -2px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .signup {
+        grid-template-columns: repeat(1, 1fr);
+        position: relative;
+        &__thumb {
+            background-position: top center;
+            order: 1;
+            display: none;
+        }
+        &__form {
+            order: 2;
+        }
+        &__link {
+            color: $white
+        }
+    }
+}

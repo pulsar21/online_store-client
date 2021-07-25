@@ -1,0 +1,9 @@
+@import './consts.scss';
+@media screen and (max-width: 767px) {
+    .signin {
+        grid-template-columns: repeat(1, 1fr);
+        &__link {
+            color: $white
+        }
+    }
+}

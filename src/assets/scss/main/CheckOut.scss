@@ -1,0 +1,151 @@
+@import '../utils/consts.scss';
+
+.checkout {
+    margin-top: 4rem;
+    &__block {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+    &__left {
+        padding: 1rem;
+        background-color: $white;
+    }
+    &__right {
+        padding: 2rem;
+        background-color: $white;
+        &-cart {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            & > span > div > img {
+                width: 100px;
+                height: 100px;
+            }
+            & > div {
+                margin-left: 2rem;
+                & > p {
+                    margin-bottom: 0;
+                    font-size: 20px;
+                }
+            }
+        }
+        & > .total-price {
+            margin: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+        }
+    }
+    &__contacts {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 2rem;
+        .form__item {
+            margin-top: 0;
+        }
+    }
+    &__title {
+        margin-top: 1rem;
+        font-size: 20px;
+    }
+    &__input {
+        background-color: $white;
+        border: 1px solid $bgIndigo;
+        &-card {
+            border: 0;
+            border-bottom: 1px solid $bgIndigo;
+        }
+    }
+    &__address {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 2rem;
+        .form__item {
+            margin-top: 0;
+        }
+    }
+    &__card {
+        width: 500px;
+        margin-top: 1rem;
+        padding: 2rem;
+        border: 1px solid $bgIndigo;
+        &-grid {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            & > div {
+                display: flex;
+                align-items: center;
+            }
+            & > p {
+                margin: 0 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__btn {
+        background-color: $voilet;
+        color: $white;
+    }
+    &__group {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .checkout {
+        &__block {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 574px) {
+    .checkout {
+        &__block {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__contacts {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__address {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        button {
+            margin-left: 0 !important;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__card {
+            width: 100%;
+        }
+        &__group {
+            display: flex;
+            flex-direction: column;
+            .button:last-child {
+                margin-left: 0;
+            }
+        }
+        &__right {
+            &-cart {
+                & > div {
+                    & > h3 {
+                        font-size: 18px;
+                    }
+                    & > p {
+                        font-size: 16px;
+                    }
+                }
+            }
+            & > .total-price {
+                font-size: 16px;
+            }
+        }
+    }
+}

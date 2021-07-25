@@ -1,0 +1,35 @@
+@import '../utils/consts.scss';
+//avatar 
+.avatar {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    cursor: pointer;
+    &  > span {
+        background-color: $purple;
+        color: $white;
+    }
+    &__dropdown {
+        color: $white;
+    }  
+    &__item {
+        &-logout {  
+            &:hover {
+                background-color: $red;
+                & > span {
+                    color: $white;
+                    & > svg {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &-logout > span > svg, &-logout > span  {
+            color: $red;
+        }
+    } 
+    &__link {
+        margin-left: 10px;
+        color: $dark;
+    }
+}

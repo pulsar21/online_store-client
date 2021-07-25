@@ -1,0 +1,57 @@
+@import '../utils/consts.scss';
+.monitor {
+    &__overview {
+        display: flex;
+        align-items: center;
+        & > span {
+            margin-left: 2rem;
+        }
+    }
+    &__img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+    &__cards {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 2rem;
+    }
+    &__card {
+        background-color: inherit;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        border: 1px solid $white;
+        background: $white;
+        &__img {
+            svg {
+                color: $purple;
+                width: 25px;
+                height: 25px;
+            }
+        }
+        & > span {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+   .monitor {
+       &__cards {
+           grid-template-columns: repeat(2, 2fr);
+       }
+   }
+}
+
+@media only screen and (max-width: 425px) {
+    .monitor {
+        &__cards {
+            grid-template-columns: repeat(1, 4fr);
+        }
+        &__overview {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+ }

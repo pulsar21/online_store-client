@@ -1,0 +1,24 @@
+@import '../utils/consts.scss';
+
+.product {
+    &__cards {
+        margin-top: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__card {
+        background-color: $bgIndigo;
+        display: flex;
+        &__thumb {
+            & > img {
+                width: 200px;
+                height: 150px;
+            }
+        } 
+        &__desc {
+            margin-top: 1rem;
+        }
+        &__price {
+            margin-top: 1rem;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import '../utils/consts.scss';
+
+.type {
+    margin-top: 6.7rem;
+    &__cards {
+        margin-top: 2rem;
+        grid-template-columns: repeat(8, 1fr);
+    }
+    &__card {
+        background-color: $white;
+        & > a {
+            display: flex;
+            align-items: center;
+            & > h4 {
+                margin-left: 1rem;
+                font-size: 14px;
+                opacity: 0.8;
+            }
+            & > span > svg {
+                opacity: 0.8;
+                color: $dark;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .type {
+        &__cards {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .type {
+        &__cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .type {
+        &__cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 524px) {
+    .type {
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .type {
+        &__cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

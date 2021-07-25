@@ -1,0 +1,113 @@
+@import '../utils/consts.scss';
+
+.basket {
+    margin-top: 3rem;
+    &__block {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+    &__left {
+        & > h2 {
+        }
+        &-content {
+            margin-top: 1rem;
+            background-color: $white;
+            & > &__card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                & > span > div > img {
+                    width: 100px;
+                    height: 100px;
+                }
+                & > div {
+                    display: flex;
+                    align-items: flex-start;
+                    & > p {
+                        font-size: 20px;
+                        margin-bottom: 0;
+                    }
+                    & > .quantity {
+                        margin-left: 1rem;
+                        select {
+                            width: 50px;
+                            height: 35px;
+                            color: $voilet;
+                            border: 1px solid $voilet;
+                        }
+                    }
+                    & > button {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            & > &__empty {
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    &__right {
+        padding: 1rem 1rem 3rem 1rem;
+        background-color: $white;
+        height: 350px;
+        &-content {
+            text-align: center;
+            & > h4 {
+                font-size: 20px;
+            }
+        }
+        & > .subtotal {
+            display: flex;
+            justify-content: space-between;
+            & > span {
+                font-size: 20px;
+            }
+        }
+        & > .total {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            & > span {
+                font-size: 24px;
+            }
+        }
+        &-footer {
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .basket {
+        &__block {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 524px) {
+    .basket {
+        &__left {
+            &-content {
+                &__card {
+                    flex-wrap: wrap;
+                    & > h3 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &__right {
+            & > .subtotal > span {
+                font-size: 16px;
+            }
+            & > .total > span {
+                font-size: 18px;
+            }
+        }
+    }
+}

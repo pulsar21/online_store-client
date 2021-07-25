@@ -1,0 +1,358 @@
+@import '../utils/consts.scss';
+.home {
+    margin-top: 1rem;
+    &__overview {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &__thumb {
+        text-align: center;
+        & > img {
+            width: 500px;
+            height: 400px;
+            object-fit: contain;
+        }
+    }
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        background: url('../../img/main/main-bg.png') no-repeat;
+        background-position-x: 90%;
+        background-size: contain;
+        background-color: $voilet;
+    }
+    &__filter {
+        margin-top: 2rem;
+        & > ul {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 0.5rem;
+            & > li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $voilet;
+                padding: 5px 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                & > span {
+                    color: $white;
+                }
+            }
+        }
+    }
+    &__title {
+        color: $white;
+    }
+    &__desc {
+        margin-top: 2rem;
+        color: $white;
+    }
+    &__btn {
+        margin-top: 2rem;
+        background-color: $white;
+        color: $voilet;
+    }
+    &__cards {
+        margin-top: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__card {
+        display: flex;
+        &__thumb {
+            & > img {
+                width: 200px;
+                height: 150px;
+            }
+        } 
+        &__desc {
+            margin-top: 1rem;
+        }
+        &__price {
+            margin-top: 1rem;
+        }
+    }
+}
+
+
+.device {
+    height: 100vh;
+    margin: 1rem 0;
+    &__popular {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+        & > h3 {
+            color: $dark;
+        }
+        & > a {
+            color: $dark;
+        }
+    }
+    &__sidebar {
+        padding: 0 1rem;
+        svg {
+            font-size: 10px;
+            color: $dark;
+        }
+        .selected {
+            .ant-tag {
+                padding: 3px 10px;
+                background-color: $voilet;
+                color: $white;
+            }
+        }
+        .price, .rating {
+            margin-top: 2rem;
+            &__block {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & > span > svg {
+                    transition: all 0.5;
+                }
+            }
+            &__input {
+                margin-top: 0.5rem;
+                display: flex;
+                align-items: center;
+                &-circle {
+                    border-radius: 15px;
+                }
+            }
+            &__line {
+                margin: 0 0.5rem;
+            }
+            &__btn {
+                margin-top: 0.5rem;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                button {
+                    border-radius: 15px;
+                    background-color: $voilet;
+                    color: $white;
+                }
+            }
+            &__show {
+                display: block;
+            }
+            &__hide {
+                display: none;
+            }
+        }
+    }
+    &__right {
+        .ant-spin-container {
+            display: flex;
+        }
+    }
+    & > a {
+        color: $dark;
+        & > svg {
+            margin-left: 10px;
+        }
+    }
+    &__block {
+        padding: 0 1rem;
+        & > .block__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+                padding: 0 8px;
+            }
+        }
+    }
+    &__cards {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.5rem;
+        &-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        &-gap {
+            gap: 1rem;
+        }
+    }
+    &__card {
+        background-color: $white;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+    &__img {
+        text-align: center;
+        & > div > img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    &__title {
+        text-align: center;
+        h3 {
+            font-size: 14px;
+            margin: 1rem 0;
+        }
+    }
+    &__price {
+        text-align: center;
+        & > p {
+            color: $dark;
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+    }
+    &__header {
+        padding: 0.5rem;
+        width: 100%;
+        .add-to-heart {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            & > button {
+                border: none;
+                & > span > svg {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &__footer {
+        padding: 1rem 0.5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > button {
+            border: none;
+            & > span > svg {
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .device {
+        &__right {
+            .device__cards {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .home {
+        &__cards {
+            grid-template-columns: repeat(2, 2fr);
+        }
+    }
+    .device {
+        height: 140vh;
+        &__cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        &__right {
+            .device__cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .device {
+        &__cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .home {
+        &__filter {
+            & > ul {
+                grid-template-columns: repeat(6, 1fr);
+                gap: 0.5rem;
+            }
+        }
+    }
+    .slider {
+        padding: 3rem;
+    }
+    .device {
+        height: 240vh;
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__row {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__right {
+            .device__cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        &__block {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 564px) {
+    .home {
+        &__cards {
+            grid-template-columns: repeat(1, 4fr);
+        }
+        &__filter {
+            & > ul {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+    .slider {
+        padding: 2rem;
+    }
+    .device {
+        height: 410vh;
+        &__cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__block {
+            .block__header {
+                flex-wrap: wrap;
+            }
+        }
+        &__right {
+            .device__cards {
+                margin-top: 1rem;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .home {
+        &__cards {
+            grid-template-columns: repeat(1, 4fr);
+        }
+        &__filter {
+            & > ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

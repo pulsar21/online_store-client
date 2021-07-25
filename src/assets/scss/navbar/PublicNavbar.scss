@@ -1,0 +1,260 @@
+@import '../utils/consts.scss';
+.header {
+    background-color: $white;
+    padding-top: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    .ant-divider-horizontal {
+        margin: 0;
+    }
+    &__logo {
+        & > a {    
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: $dark;
+            & > span > svg {
+                width: 32px;
+                height: 32px;
+                fill: $voilet;
+            }
+            & > h1 {
+                margin-left: 0.5rem;
+                font-size: 18px;
+            }
+        }
+
+    }
+    & > nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__helper {
+        display: flex;
+        align-items: center;
+    }
+    &__phone {
+        display: flex;
+        align-items: center;
+        .helper {
+            display: none;
+            & > .header__like {
+            }
+        }
+        .phone {
+            text-align: center;
+            & > a > span > svg {
+                font-size: 20px;
+            }
+            & > a {
+                color: $dark;
+                margin-left: 0.5rem;
+            }
+        }
+        .schedule {
+            margin: 0 1rem;
+            text-align: center;
+            & > span {
+                font-size: 13px;
+            }
+        }
+    }
+    &__basket {
+        margin-left: 1rem;
+        & > .ant-badge {
+            & > span > svg {
+                font-size: 18.5px;
+            }
+        }
+    } 
+    &__like {
+        & > .ant-badge {
+            & > span > svg {
+                font-size: 16px;
+            }
+        } 
+    }
+    &__search {
+        width: 550px;
+        margin: 0 1rem;
+        .ant-input {
+            padding: 3.5px 11px;
+        }
+        .ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button {
+            border-radius: 0 15px 15px 0;
+        }
+        input {
+            border: 1.5px solid $voilet;
+            border-radius: 15px;
+        }  
+        button {
+            border: 1px solid $voilet;
+            & > span > svg {
+                color: $voilet;
+            }
+        }  
+    }
+    &__input {
+        max-width: 100%;
+        width: 550px;
+    }
+    &__group {
+        display: flex;
+        margin-left: 1rem;
+    }
+    .nav {
+        margin-bottom: 1rem;
+        &__footer {
+            background-color: $white;
+            padding: 0.7rem;
+            margin: 0 -15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .category {
+                display: flex;
+                align-items: center;
+                .ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+                    font-size: 16px;
+                } 
+                .ant-select {
+                    margin-top: 3px;
+                }
+                .ant-select-arrow {
+                    font-size: 10px;
+                    color: $dark;
+                }
+                .menu {
+                    margin-left: 1rem;
+                    & > .navbar-item {
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 0;
+                            height: 2px;
+                            background-color: $voilet;
+                            transition: width .3s;
+                        }
+                        &:hover::after {
+                            width: 100%;
+                        }
+                    }
+                }
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &__dropdown {
+                    &-type {
+                        border:none;
+                        background-color: $white;
+                        box-shadow: none;
+                        padding: 0;
+                        font-size: 16px;
+                    }
+                }
+                .dropdown {
+                    display: none;
+                    border:none;
+                    background-color: $white;
+                    box-shadow: none;
+                    padding: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .header {
+        .nav {
+            &__footer {
+                .category {
+                    .menu {
+                        display: none;
+                    }
+                    .dropdown {
+                        display: block;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .header {
+        &__logo {
+            & > a {
+                & > h1 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header {
+        &__logo {
+            & > a {
+                & > span > svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        &__helper {
+            display: none;
+        }
+        &__phone {
+            .helper {
+                display: flex;
+                align-items: center;
+                margin-right: 1.5rem;
+            }
+            .phone {
+                & > .phone-tel {
+                    display: none;
+                }
+            }
+            .schedule {
+                display: none;
+            }
+        }
+        &__search {
+            width: 100%;
+        }
+    }
+    .navbar-menu { 
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .header {
+        &__phone {
+            .helper {
+                display: flex;
+                align-items: center;
+                margin-right: 0.5rem;
+                margin-left: 0.5rem;
+            }
+            .phone {
+                & > a {
+                    margin-left: 0;
+                    & > span > svg {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

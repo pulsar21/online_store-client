@@ -1,0 +1,46 @@
+@import '../utils/consts.scss';
+
+.notification {
+    cursor: pointer;
+    &-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__title {
+
+        }
+        &__count {
+            width: 20px;
+            height: 20px;
+            background-color: $purple;
+            border-radius: 50%;
+            color: $white;
+            margin-left: 1rem;
+            text-align: center;
+        }
+        &__content {
+            width: 260px;
+            background-color: $bgIndigo;
+            padding: 1rem; 
+            & > ul {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1rem;
+                & > li {
+                    & > .avatar {
+                        margin-left: 0;
+                        .avatar__full-name {
+                            margin-left: 0.5rem;
+                            color: $purple;
+                            background-color: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ant-badge-multiple-words {
+    padding: 0 1.5px;
+}

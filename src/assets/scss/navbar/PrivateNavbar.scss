@@ -1,0 +1,65 @@
+@import '../utils/consts.scss';
+.navbar {
+    background-color: $white;
+    grid-area: nav;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: 1px solid lightgray;
+    &__logo {
+        background-color: #010509;
+        & > h2 {
+            color: $white;
+        }
+    }
+    &__icon {
+        display: none;
+        margin-right: 1rem;
+    }
+    &__icon > span > svg {
+        font-size: 20px;
+        color: $purple;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        & > h3 {
+            opacity: 0.7;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__right > a {
+        margin-left: 20px;
+        text-decoration: none;
+    }
+    &__right > a > i {
+        color: #a5aaad;
+        font-size: 16px;
+        border-radius: 50px;
+        background-color: $white;
+        box-shadow: 2px 2px 5px #d9d9d9, -2px -2px 5px $white;
+    }
+    &__country {
+        margin-right: 10px;
+    }
+    &__switch {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 978px) {
+    .navbar {
+        &__icon {
+            display: inline;
+        }
+    }
+}
+

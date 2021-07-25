@@ -1,0 +1,8 @@
+@import '../utils/consts.scss';
+
+.private-main {
+    background-color: $bgIndigo;
+    grid-area: main;
+    padding: 0.5rem;
+    overflow-y: auto;
+}

@@ -1,0 +1,19 @@
+@import '../utils/consts.scss';
+
+
+//settings
+.settings {
+    &__block {
+        & > .account {
+            .account__email {
+               & > a {
+                   color: $red;
+               }
+            }
+        }
+    }
+}
+
+.ant-switch-checked {
+    background-color: $voilet;
+}

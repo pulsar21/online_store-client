@@ -1,0 +1,90 @@
+@import '../utils/consts.scss';
+.admin-profile {
+    &__info {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    &__img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        font-size: 50px;
+        font-weight: 700;
+        span {
+            display: flex;
+        }
+    }
+    &__thumb {
+        display: flex;
+        flex-direction: column;
+    }
+    &__form {
+        .ant-form-item {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__group {
+        display: flex;
+        align-items: center;
+    }
+    &__btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    &__settings {
+        background-color: $purple;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4rem -0.5rem 4rem -0.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    &__content {
+        & > .cards {
+            margin-top: 1.5rem;
+            grid-template-columns: repeat(2,2fr);
+            & > .card {
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+                border: 1px solid $white;
+                background: $white;
+            }
+        }
+    }
+    .access__cards {
+        grid-template-columns: repeat(2,2fr);
+        & > .card {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            border: 1px solid $white;
+            background: $white;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .admin-profile {
+        &__info {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .admin-profile {
+        &__content {
+            & > .cards {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        .access__cards {
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}

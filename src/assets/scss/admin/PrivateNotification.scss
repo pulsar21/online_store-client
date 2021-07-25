@@ -1,0 +1,29 @@
+@import '../utils/consts.scss';
+
+.customer {
+    .cards {
+        margin-top: 1rem;
+        & > .card {
+            padding: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        & > .divider {
+            margin: -1rem 0;
+        }
+    }
+    .avatar {
+        margin-left: 0;
+        &__full-name {
+            margin-left: 0.5rem;
+            color: $purple;
+            background-color: inherit;
+        }
+    }
+    .content {
+        & > p {
+            font-size: 18px;
+        }
+    }
+}

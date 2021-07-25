@@ -1,0 +1,71 @@
+@import '../utils/consts.scss';
+
+.check {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: $voilet;
+    & > .auth-container {
+        background-color: $white;
+        padding: 3rem 0;
+    }
+    &__thumb {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        background-color: $voilet;
+        border-radius: 50%;
+        & > span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            & > svg {
+                width: 75px;
+                height: 75px;
+                color: $white;
+                fill: $white;
+            }
+        }
+    }
+    &__title {
+        margin-top: 1rem;
+        font-size: 36px;
+    }
+    &__desc {
+        margin-top: 1rem;
+        font-size: 20px;
+    }
+    &__btn {
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .check {
+        &__title {
+            margin-top: 1rem;
+            font-size: 28px;
+        }
+        &__desc {
+            margin-top: 1rem;
+            font-size: 18px;
+        }
+        &__btn {
+           width: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .check {
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../utils/auth-container.scss';
+@import '../utils/consts.scss';
+.auth {
+    display: flex;
+    height: 100vh;
+    background-color: $bgIndigoLight;
+    &__title {
+        text-align: center;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .auth {
+        background-color: $white;
+    }
+}
